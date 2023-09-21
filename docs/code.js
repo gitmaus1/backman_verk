@@ -44,10 +44,9 @@ function lock (orientation) {
 
 
 
-// Starts vibration at passed in level
-function hristabyrja(duration) {
-    navigator.vibrate(duration);
-  }
+
+
+  
   
 
 
@@ -601,7 +600,8 @@ pacmon.pack_stjórn();
           líf = líf - 1;
             movey = 100
           movex = 100
-          hristabyrja(100);
+          
+          navigator.vibrate(100,100);
           
         }
       }
@@ -618,7 +618,7 @@ pacmon.pack_stjórn();
           líf = líf - 1;
             movey = 100
           movex = 100
-          hristabyrja(100);
+          navigator.vibrate(100,100);
           
         }
         
