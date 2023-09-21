@@ -864,7 +864,7 @@ function keyspaceHandler(taki) {
       location.reload();
     }
     myScreenOrientation.lock("landscape");
-    lock();
+    lock("landscape");
   }
 
   canvas.addEventListener("touchend", touch_end);
