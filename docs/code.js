@@ -21,8 +21,9 @@ let height = (canvas.height = window.innerHeight);
 
 let dooooooooooo= 0
 
+var myScreenOrientation = window.screen.orientation;
 
-
+myScreenOrientation.lock("portrait");
 
 
 
@@ -783,13 +784,18 @@ function move_pack_to(to1,to2){
 
 // fullscreen
 document.addEventListener("keydown", keyspaceHandler, false);
+
 function keyspaceHandler(taki) {
     if(taki.key == "f" || taki.key == "F") {
         toggleFullScreen();
+
         
     }}
 
+
+
   function toggleFullScreen() {
+    
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
       if (dooooooooooo == 0){
