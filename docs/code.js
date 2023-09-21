@@ -597,7 +597,7 @@ pacmon.pack_stjórn();
         
         x.litur = ghostlitir[endurlita];
         endurlita = endurlita + 1;
-        window.navigator.vibrate([200, 100, 200]);
+        window.navigator.vibrate([200]);
             }
 
             
