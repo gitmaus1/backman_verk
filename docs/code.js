@@ -679,10 +679,10 @@ stopaðuX = height - stærð
 
  Pelletss = []
 
- testBall = new Power_Pellets(5+Pellets_stærð,height-Pellets_stærð-5);
- testBall2 = new Power_Pellets(5+Pellets_stærð,5+Pellets_stærð);
- testBall3 = new Power_Pellets(width-10,height-Pellets_stærð-5);
- testBall4 = new Power_Pellets(width-10,5+Pellets_stærð);
+ testBall = new Power_Pellets(20+Pellets_stærð,height-Pellets_stærð-20);
+ testBall2 = new Power_Pellets(20+Pellets_stærð,20+Pellets_stærð);
+ testBall3 = new Power_Pellets(width-20,height-Pellets_stærð-20);
+ testBall4 = new Power_Pellets(width-20,20+Pellets_stærð);
  
  Pelletss.push(testBall);
  Pelletss.push(testBall2);
