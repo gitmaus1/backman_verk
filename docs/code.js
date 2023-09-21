@@ -601,7 +601,7 @@ pacmon.pack_stjórn();
             movey = 100
           movex = 100
           
-          navigator.vibrate(100,100);
+          navigator.vibrate(1000,100,5);
           
         }
       }
@@ -618,7 +618,7 @@ pacmon.pack_stjórn();
           líf = líf - 1;
             movey = 100
           movex = 100
-          navigator.vibrate(100,100);
+          navigator.vibrate(1000,100,5);
           
         }
         
