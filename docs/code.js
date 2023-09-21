@@ -4,6 +4,9 @@
 
 
 
+
+
+
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -15,6 +18,8 @@ let width = (canvas.width = window.innerWidth);
 let height = (canvas.height = window.innerHeight);
 
 
+
+let dooooooooooo= 0
 
 
 
@@ -68,6 +73,14 @@ class Power_Pellets{
 // dots score
 
 let score = 0;
+
+
+
+
+
+
+
+
 
 class Power_dots{
     constructor(dots_movey, dots_movex){
@@ -397,12 +410,12 @@ let startTime
 
 
 
-//  load event
-window.onload = (event) => {
-    console.log("page is fully loaded");
+
+
     
-    move();
-  };
+
+    
+
 //move();
 
 function move() {
@@ -413,7 +426,7 @@ function move() {
     // score líf
     ctx.fillText("score "+score, movey-20, movex- 25);
     ctx.fillText("líf "+líf, movey-20, movex- 15);
-    ctx.fillText("swipp up fullscreen ",movey- 20, movex- 35);
+    
     // dots
     let i = 0;
     for (const x of dots){
@@ -661,6 +674,57 @@ function resizeið(){
 stopaðuY = width - stærð
 stopaðuX = height - stærð
 
+ movey = 100
+ movex = 100
+
+ Pelletss = []
+
+ testBall = new Power_Pellets(5+Pellets_stærð,height-Pellets_stærð-5);
+ testBall2 = new Power_Pellets(5+Pellets_stærð,5+Pellets_stærð);
+ testBall3 = new Power_Pellets(width-10,height-Pellets_stærð-5);
+ testBall4 = new Power_Pellets(width-10,5+Pellets_stærð);
+ 
+ Pelletss.push(testBall);
+ Pelletss.push(testBall2);
+ Pelletss.push(testBall3);
+ Pelletss.push(testBall4);
+
+
+
+  score = 0;
+
+
+ dots = [];
+  tal_dots = 0;
+ while (tal_dots < 50) {
+ 
+      dots_movey = randomið(0+2, width-2)
+      dots_movex = randomið(0+2, height-2)
+    dot_ball = new Power_dots(dots_movey,dots_movex);
+   tal_dots = tal_dots + 1;
+   dots.push(dot_ball);
+ 
+ }
+
+
+
+for ( x of Ghosts) {
+        // firir if else
+  
+
+      
+        
+        // árecktstur Ghost og pacMan
+       
+      
+       
+       x.Ghost_movey = randomið(0+Ghost_stærð, width-Ghost_stærð)
+     x.Ghost_movex = randomið(0+Ghost_stærð, height-Ghost_stærð)
+ 
+}
+
+
+
 }
 
 // touch
@@ -734,6 +798,11 @@ function keyspaceHandler(taki) {
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
+      if (dooooooooooo == 0){
+      move();
+    dooooooooooo = 1
+
+}
     } else if (document.exitFullscreen) {
       document.exitFullscreen();
     }
