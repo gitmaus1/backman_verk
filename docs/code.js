@@ -582,7 +582,7 @@ pacmon.pack_stjórn();
         
         x.litur = ghostlitir[endurlita];
         endurlita = endurlita + 1;
-        hristabyrja(100);
+        
             }
 ///////////////////////////////////////////////////////////////////////////////////////////
             
@@ -601,6 +601,7 @@ pacmon.pack_stjórn();
           líf = líf - 1;
             movey = 100
           movex = 100
+          hristabyrja(100);
           
         }
       }
@@ -617,6 +618,7 @@ pacmon.pack_stjórn();
           líf = líf - 1;
             movey = 100
           movex = 100
+          hristabyrja(100);
           
         }
         
