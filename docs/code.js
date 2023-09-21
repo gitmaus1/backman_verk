@@ -46,12 +46,15 @@ function lock (orientation) {
 
 
 
+  // ring a ding ding
+
+  function ring_a_ding_ding(ring,a,ding) {
   
-  
+    navigator.vibrate(ring,a,ding);
 
 
 
-
+  }
 
 
 
@@ -601,7 +604,8 @@ pacmon.pack_stjórn();
             movey = 100
           movex = 100
           
-          navigator.vibrate(1000,100,5);
+          
+          ring_a_ding_ding(1000,1000,500);
           
         }
       }
@@ -618,7 +622,7 @@ pacmon.pack_stjórn();
           líf = líf - 1;
             movey = 100
           movex = 100
-          navigator.vibrate(1000,100,5);
+          ring_a_ding_ding(1000,1000,500);
           
         }
         
