@@ -25,45 +25,30 @@ let dooooooooooo= 0
 let myScreenOrientation = window.screen.orientation; // "landscape" "portrait"
 
 
-//let port = window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
- //   myScreenOrientation.lock("landscape");
-//});
 
-//let port2 = window.matchMedia("(orientation: landscape)").addEventListener("change", () => {
-//    const oppositeOrientation = screen.orientation.type.startsWith("portrait")
-//    ? "landscape"
-//    : "portrait";
-//  screen.orientation
-//    .lock(oppositeOrientation)
-//    .then(() => {
-//      log.textContent = `Locked to ${oppositeOrientation}\n`;
-//    })
-//    .catch((error) => {
-//      log.textContent += `${error}\n`;
-  //  });
-//});
-
-
-
-//console.log(port);
 
 
 
 
 function lock (orientation) {
-    // (A1) GO INTO FULL SCREEN FIRST
+    
     let de = document.documentElement;
     if (de.requestFullscreen) { de.requestFullscreen(); }
     else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
     else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
     else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
   
-    // (A2) THEN LOCK ORIENTATION
+    
     screen.orientation.lock(orientation);
   }
 
 
 
+// Starts vibration at passed in level
+function hristabyrja(duration) {
+    navigator.vibrate(duration);
+  }
+  
 
 
 
@@ -597,9 +582,9 @@ pacmon.pack_stjórn();
         
         x.litur = ghostlitir[endurlita];
         endurlita = endurlita + 1;
-        window.navigator.vibrate([200]);
+        hristabyrja(100);
             }
-
+///////////////////////////////////////////////////////////////////////////////////////////
             
 
 
