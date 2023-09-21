@@ -692,6 +692,7 @@ stopaðuX = height - stærð
 
 
   score = 0;
+  líf = 3;
 
 
  dots = [];
@@ -709,14 +710,7 @@ stopaðuX = height - stærð
 
 
 for ( x of Ghosts) {
-        // firir if else
-  
 
-      
-        
-        // árecktstur Ghost og pacMan
-       
-      
        
        x.Ghost_movey = randomið(0+Ghost_stærð, width-Ghost_stærð)
      x.Ghost_movex = randomið(0+Ghost_stærð, height-Ghost_stærð)
@@ -804,7 +798,8 @@ function keyspaceHandler(taki) {
 
 }
     } else if (document.exitFullscreen) {
-      document.exitFullscreen();
+      // document.exitFullscreen();
+      location.reload();
     }
   }
 
