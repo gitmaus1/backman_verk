@@ -906,8 +906,8 @@ function keyspaceHandler(taki) {
       
       const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
 
-         or_beta = leftToRight
-         or_gamma = frontToBack
+         or_beta = frontToBack 
+         or_gamma =  leftToRight
 
 
       };
