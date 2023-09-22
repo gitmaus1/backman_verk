@@ -41,32 +41,31 @@ function lock (orientation) {
 
 let or_beta = 0
 let or_gamma = 0
-window.addEventListener('deviceorientation', event => {
-    
-    or_beta=event.beta // rotation along the x axis
-    or_gamma=event.gamma // rotation along the y axis
-}, true);
-window.addEventListener("deviceorientation", (event) => {
-    console.log(`${event.alpha} : ${event.beta} : ${event.gamma}`);
-  });
 
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener(
-      "deviceorientation",
-      (event) => {
-        const rotateDegrees = event.alpha; // alpha: rotation around z-axis
-        const leftToRight = event.gamma; // gamma: left to right
-        const frontToBack = event.beta; // beta: front back motion
+
+
+
+
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+
+
+
+function handleOrientation(event) {
+    const absolute = event.absolute;
+    const alpha = event.alpha;
+    const beta = event.beta;
+    const gamma = event.gamma;
+
+    ctx.fillText("or b "+beta+" or g "+gamma, movey-20, movex- 35);
   
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-      },
-      true,
-    );
+    // Do stuff with the new orientation data
   }
   
-  const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
-    ctx.fillText("or b "+leftToRight+" or g "+frontToBack, movey-20, movex- 35);
-  };
+
+
+
 
 
 
