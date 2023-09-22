@@ -46,6 +46,27 @@ window.addEventListener('deviceorientation', event => {
     or_beta=event.beta // rotation along the x axis
     or_gamma=event.gamma // rotation along the y axis
 }, true);
+window.addEventListener("deviceorientation", (event) => {
+    console.log(`${event.alpha} : ${event.beta} : ${event.gamma}`);
+  });
+
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener(
+      "deviceorientation",
+      (event) => {
+        const rotateDegrees = event.alpha; // alpha: rotation around z-axis
+        const leftToRight = event.gamma; // gamma: left to right
+        const frontToBack = event.beta; // beta: front back motion
+  
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+      },
+      true,
+    );
+  }
+  
+  const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+    ctx.fillText("or b "+leftToRight+" or g "+frontToBack, movey-20, movex- 35);
+  };
 
 
   // ring a ding ding
@@ -468,7 +489,7 @@ function move() {
 
 
 
-    ctx.fillText("or b "+or_beta+" or g "+or_gamma, movey-20, movex- 35);
+    
     // score líf
     ctx.fillText("score "+score, movey-20, movex- 25);
     ctx.fillText("líf "+líf, movey-20, movex- 15);
