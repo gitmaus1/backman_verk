@@ -474,7 +474,7 @@ function move() {
     // hreinsar canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-
+ 
 
     
     // score líf
@@ -864,6 +864,30 @@ function keyspaceHandler(taki) {
       move();
     dooooooooooo = 1
 
+
+
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener(
+          "deviceorientation",
+          (event) => {
+            const rotateDegrees = event.alpha; // alpha: rotation around z-axis
+            const leftToRight = event.gamma; // gamma: left to right
+            const frontToBack = event.beta; // beta: front back motion
+      
+            handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+          },
+          true,
+        );
+      }
+      
+      const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+        movex=movex+leftToRight
+        movey=movey+rotateDegrees
+      };
+
+
+
+    
 }
     } else if (document.exitFullscreen) {
       // document.exitFullscreen();
@@ -896,16 +920,4 @@ function touch_end(da){
      //movex = na.changedTouches[0].clientY
 }
 
-window.addEventListener("deviceorientation", handleOrientation, true);
 
-function handleOrientation(event) {
-    const absolute = event.absolute;
-    const alpha = event.alpha;
-    const beta = event.beta;
-    const gamma = event.gamma;
-
-    
-    movey = movey + beta
-    movey = movey + gamma
-    // Do stuff with the new orientation data
-  }
