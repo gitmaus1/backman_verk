@@ -47,21 +47,7 @@ let or_gamma = 0
 
 
 
-window.addEventListener("deviceorientation", handleOrientation, true);
 
-
-
-
-function handleOrientation(event) {
-    const absolute = event.absolute;
-    const alpha = event.alpha;
-    const beta = event.beta;
-    const gamma = event.gamma;
-
-    ctx.fillText("or b "+beta+" or g "+gamma, movey-20, movex- 35);
-  
-    // Do stuff with the new orientation data
-  }
   
 
 
@@ -909,3 +895,17 @@ function touch_end(da){
      //movey = na.changedTouches[0].clientX
      //movex = na.changedTouches[0].clientY
 }
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+function handleOrientation(event) {
+    const absolute = event.absolute;
+    const alpha = event.alpha;
+    const beta = event.beta;
+    const gamma = event.gamma;
+
+    
+    movey = movey + beta
+    movey = movey + gamma
+    // Do stuff with the new orientation data
+  }
