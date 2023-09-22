@@ -476,6 +476,30 @@ function move() {
 
  
 
+
+// hreifa sima
+    if (or_beta > 0){
+        movey=movey+1
+    }
+    if (or_beta < 0){
+        movey=movey-1
+    }
+    if (or_gamma > 0){
+        movex=movex+1
+    }
+    if (or_gamma < 0){
+        movex=movex-1
+    }
+
+
+
+
+
+
+
+
+
+
     
     // score líf
     ctx.fillText("score "+score, movey-20, movex- 25);
@@ -881,8 +905,11 @@ function keyspaceHandler(taki) {
       }
       
       const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
-        movex=movex+frontToBack
-        movey=movey+leftToRight
+
+         or_beta = leftToRight
+         or_gamma = frontToBack
+
+
       };
 
 
