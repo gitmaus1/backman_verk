@@ -881,8 +881,8 @@ function keyspaceHandler(taki) {
       }
       
       const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
-        movex=movex+leftToRight
-        movey=movey+rotateDegrees
+        movex=movex+frontToBack
+        movey=movey+leftToRight
       };
 
 
