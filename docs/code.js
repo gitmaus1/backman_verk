@@ -69,6 +69,8 @@ window.addEventListener("deviceorientation", (event) => {
   };
 
 
+
+  ctx.fillText("svipe up to start", 50, 50);
   // ring a ding ding
 
   function ring_a_ding_ding(ring,a,ding) {
