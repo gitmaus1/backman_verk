@@ -55,7 +55,7 @@ let or_gamma = 0
 
 
 
-  ctx.fillText("svipe up to start  6", 50, 50);
+  ctx.fillText("svipe up to start  aaaaaaaaaaaaaaaaaaaaaaaaaa", 50, 50);
   // ring a ding ding
 
   function ring_a_ding_ding(ring,a,ding) {
