@@ -56,8 +56,8 @@ function lock (orientation) {
 
   }
 
-
-
+// hloð
+let hloð = new Audio("sound.mp3");
 
 
 //random fall
@@ -528,6 +528,7 @@ for (const x of Pelletss){
               x.Pellets_movex=randomið(0+Ghost_stærð, height-Ghost_stærð)
 
                er_hunter = true
+               hloð.play();
                
             }
             else if(fjarlægð_Pellets === suman_Pellets){
@@ -537,6 +538,7 @@ for (const x of Pelletss){
               x.Pellets_movex=randomið(0+Ghost_stærð, height-Ghost_stærð)
 
               er_hunter = true
+              hloð.play();
 
             }
             else if(fjarlægð_Pellets > suman_Pellets){
