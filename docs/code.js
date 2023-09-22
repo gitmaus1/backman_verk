@@ -25,11 +25,6 @@ let dooooooooooo= 0
 let myScreenOrientation = window.screen.orientation; // "landscape" "portrait"
 
 
-
-
-
-
-
 function lock (orientation) {
     
     let de = document.documentElement;
@@ -42,8 +37,15 @@ function lock (orientation) {
     screen.orientation.lock(orientation);
   }
 
+// ori
 
-
+let or_beta = 0
+let or_gamma = 0
+window.addEventListener('deviceorientation', event => {
+    
+    or_beta=event.beta // rotation along the x axis
+    or_gamma=event.gamma // rotation along the y axis
+}, true);
 
 
   // ring a ding ding
@@ -457,13 +459,16 @@ function move() {
     // console.log(port);
 
 
-
-
+    
  
     
 
     // hreinsar canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+
+    ctx.fillText("or b "+or_beta+" or g "+or_gamma, movey-20, movex- 35);
     // score líf
     ctx.fillText("score "+score, movey-20, movex- 25);
     ctx.fillText("líf "+líf, movey-20, movex- 15);
