@@ -856,8 +856,8 @@ function keyspaceHandler(taki) {
       // document.exitFullscreen();
       location.reload();
     }
-    myScreenOrientation.lock("landscape");
-    lock("landscape");
+    myScreenOrientation.lock("landscape-primary");
+    lock("landscape-primary");
   }
 
   canvas.addEventListener("touchend", touch_end);
