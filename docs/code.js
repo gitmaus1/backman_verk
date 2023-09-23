@@ -55,7 +55,7 @@ let or_gamma = 0
 
 
 
-  ctx.fillText("svipe up to start  aaaaaaaaaaaaaaaaaaaaaaaaaa", 50, 50);
+  ctx.fillText("svipe up to start  skill", 50, 50);
   // ring a ding ding
 
   function ring_a_ding_ding(ring,a,ding) {
@@ -484,10 +484,10 @@ function move() {
     if (or_beta < 0){
         movey=movey-1
     }
-    if (or_gamma > 0){
+    if (or_gamma < 0){
         movex=movex+1
     }
-    if (or_gamma < 0){
+    if (or_gamma > 0){
         movex=movex-1
     }
 
@@ -825,44 +825,7 @@ function touch_my(na){
 }
 
 function move_pack_to(to1,to2){
-    if (tru == false){
-        //console.log(tru)
-        tru = false
-                
-          
-    }
-    else if (tru === true){
-
-        if (movey < to1){
-            movey = movey +1
-            //console.log("move")
-            mun1 = 30
-            mun2 = 330
-         
-        }
-        if (movey > to1){
-            movey = movey -1
-            //console.log("move")
-            mun1 = 200
-            mun2 = 130
-        }
-
-        if (movex < to2){
-            movex = movex +1
-            //console.log("move")
-        }
-        if (movex > to2){
-            movex = movex -1
-            //console.log("move")
-            
-        }
-
-
-        if (movey === to1 && movex === to2){
-            tru = false
-            //console.log(tru)
-        }
-    }
+  
     
 }
 
